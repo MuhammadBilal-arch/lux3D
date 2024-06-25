@@ -1,0 +1,70 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+// Looking for ways to speed up your queries, or scale easily with your serverless or edge functions?
+// Try Prisma Accelerate: https://pris.ly/cli/accelerate-init
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+model User {
+  id              Int               @id @default(autoincrement())
+  username        String            @unique
+  password        String
+  age             String?
+  gender          String?
+  phoneNumber     String?
+  email           String            @unique
+  emailVerified   DateTime?
+  image           String?
+  createdAt       DateTime          @default(now())
+  updatedAt       DateTime          @updatedAt
+  role            String            @default("provider")
+  labUserId       Int?
+  labUser         User?             @relation("LabUserToProvider", fields: [labUserId], references: [id])
+  providers       User[]            @relation("LabUserToProvider")
+  providerId      Int?
+  provider        User?             @relation("ProviderToCustomer", fields: [providerId], references: [id])
+  customers       User[]            @relation("ProviderToCustomer")
+  customerReports MedicalReport[]   @relation("Patient")
+  providerReports MedicalReport[]   @relation("Provider")
+  labReports      ReportStructure[] @relation("Lab")
+  accountStatus   String?           @default("APPROVAL_REQUIRED")
+}
+
+model ReportStructure {
+  id        Int             @id @default(autoincrement())
+  name      String          @unique
+  createdAt DateTime        @default(now())
+  updatedAt DateTime        @updatedAt
+  fields    Json // JSON representation of the fields in the report
+  lab       User?            @relation("Lab", fields: [labId], references: [id])
+  labId     Int?
+  reports   MedicalReport[] // Relation to MedicalReport
+}
+
+model MedicalReport {
+  id            Int             @id @default(autoincrement())
+  createdAt     DateTime        @default(now())
+  updatedAt     DateTime        @updatedAt
+  testType      String?
+  testDate      DateTime?
+  reportingDate DateTime?
+  testResult    String?
+  labId         String?
+  fields        Json?
+  samples       Json?
+  provider      User            @relation("Provider", fields: [providerId], references: [id])
+  providerId    Int
+  reportType    ReportStructure @relation(fields: [reportTypeId], references: [id])
+  reportTypeId  Int
+  patient       User            @relation("Patient", fields: [patientId], references: [id])
+  patientId     Int
+  status        String          @default("IN_PROCESS")
+}
