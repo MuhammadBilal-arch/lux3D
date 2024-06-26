@@ -16,11 +16,12 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <head>
+        <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
       </head>
       <body className="font-metropolis">
         <Providers>
-            <AOSWrapper>{children}</AOSWrapper>
-            <ToastContainer />
+          <AOSWrapper>{children}</AOSWrapper>
+          <ToastContainer />
         </Providers>
 
       </body>

@@ -7,6 +7,7 @@ import { ProjectCard } from "@/components/cards/projects/card";
 import { Nav } from "@/components/nav";
 import { ASSETS } from "@/public/path";
 import Link from "next/link";
+import { WeOffers } from "@/components/carousel/offers";
 
 export default function Home() {
   return (
@@ -63,7 +64,7 @@ export default function Home() {
         </div>
       </main >
       {/* OUR SERVICES */}
-      <section className="bg-gray-background py-20  mx-auto space-y-16">
+      <section className="bg-gray-background pt-20  mx-auto space-y-16">
 
         <div className="text-center">
           <div className="text-aqua font-semibold text-xl lg:text-2xl xl:text-4xl 2xl:text-5xl">Our Services</div>
@@ -96,7 +97,7 @@ export default function Home() {
       </section>
 
       {/* DATA ANALYSIS */}
-      <section className="bg-gray-background py-20  mx-auto space-y-16 min-h-screen">
+      <section className="bg-gray-background pt-20  mx-auto space-y-16 min-h-screen">
 
         <div className="w-full flex flex-col items-center">
           <div className="bg-aqua px-8 py-2 text-white rounded-[30px] z-10 -mb-7 border-2 border-white text-3xl"><span>Data</span> <span className="font-semibold">ANALYSIS</span></div>
@@ -160,9 +161,16 @@ export default function Home() {
 
 
       </section>
-
+      {/* WE OFFERS */}
+      <section className="pt-20 bg-gray-background flex items-center justify-end">
+        <div className="w-11/12">
+          <div>
+            <WeOffers />
+          </div>
+        </div>
+      </section>
       {/* OUR PROJECTS */}
-      <section className="bg-gray-background py-20">
+      <section className="bg-gray-background pt-20">
         <div className="bg-aqua rounded-3xl w-10/12 mx-auto min-h-96 py-10 px-10 space-y-10"
           style={{
             backgroundImage: `url(${ASSETS.OUR_PROJECT.OUR_PROJECT_PATTERN.src})`,
@@ -175,30 +183,32 @@ export default function Home() {
             <div className="text-white font-semibold text-xl lg:text-2xl xl:text-4xl 2xl:text-5xl">Our Projects</div>
           </div>
           <div className="grid sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 mx-auto">
-          <ProjectCard
-            image={ASSETS.OUR_PROJECT.OUR_PROJECT_1}
-            headingOne={'Tranquil Garden Pool'}
-            paragraph={'Lorem ipsum is a placeholder text commonly used to demonstrate the visual form of a document.'}
-          />
-          <ProjectCard
-            image={ASSETS.OUR_PROJECT.OUR_PROJECT_2}
-            headingOne={'Luxurious Poolside '}
-            paragraph={'Lorem ipsum is a placeholder text commonly used to demonstrate the visual form of a document.'}
-          />
-          <ProjectCard
-            image={ASSETS.OUR_PROJECT.OUR_PROJECT_3}
-            headingOne={'Sleek Lap Pool'}
-            paragraph={'Lorem ipsum is a placeholder text commonly used to demonstrate the visual form of a document.'}
-          />
-          <ProjectCard
-            image={ASSETS.OUR_PROJECT.OUR_PROJECT_4}
-            headingOne={'Modern Family Pool'}
-            paragraph={'Lorem ipsum is a placeholder text commonly used to demonstrate the visual form of a document.'}
-          />
-        </div>
+            <ProjectCard
+              image={ASSETS.OUR_PROJECT.OUR_PROJECT_1}
+              headingOne={'Tranquil Garden Pool'}
+              paragraph={'Lorem ipsum is a placeholder text commonly used to demonstrate the visual form of a document.'}
+            />
+            <ProjectCard
+              image={ASSETS.OUR_PROJECT.OUR_PROJECT_2}
+              headingOne={'Luxurious Poolside '}
+              paragraph={'Lorem ipsum is a placeholder text commonly used to demonstrate the visual form of a document.'}
+            />
+            <ProjectCard
+              image={ASSETS.OUR_PROJECT.OUR_PROJECT_3}
+              headingOne={'Sleek Lap Pool'}
+              paragraph={'Lorem ipsum is a placeholder text commonly used to demonstrate the visual form of a document.'}
+            />
+            <ProjectCard
+              image={ASSETS.OUR_PROJECT.OUR_PROJECT_4}
+              headingOne={'Modern Family Pool'}
+              paragraph={'Lorem ipsum is a placeholder text commonly used to demonstrate the visual form of a document.'}
+            />
+          </div>
+
 
         </div>
       </section >
+
       {/* <Footer /> */}
     </div >
   );
