@@ -41,6 +41,7 @@ module.exports = {
         gray:{
           text: '#838383',
           background: '#fafafa',
+          100:'#1E1E1E'
 
         },
         red:"red",

@@ -8,6 +8,7 @@ import { Nav } from "@/components/nav";
 import { ASSETS } from "@/public/path";
 import Link from "next/link";
 import { WeOffers } from "@/components/carousel/offers";
+import { Footer } from "@/components/footer";
 
 export default function Home() {
   return (
@@ -97,7 +98,7 @@ export default function Home() {
       </section>
 
       {/* DATA ANALYSIS */}
-      <section className="bg-gray-background pt-20  mx-auto space-y-16 min-h-screen">
+      <section className="bg-gray-background  pt-20  mx-auto space-y-16">
 
         <div className="w-full flex flex-col items-center">
           <div className="bg-aqua px-8 py-2 text-white rounded-[30px] z-10 -mb-7 border-2 border-white text-3xl"><span>Data</span> <span className="font-semibold">ANALYSIS</span></div>
@@ -162,7 +163,7 @@ export default function Home() {
 
       </section>
       {/* WE OFFERS */}
-      <section className="pt-20 bg-gray-background flex items-center justify-end">
+      <section className="pt-20  bg-gray-background flex items-center justify-end">
         <div className="w-11/12">
           <div>
             <WeOffers />
@@ -170,7 +171,7 @@ export default function Home() {
         </div>
       </section>
       {/* OUR PROJECTS */}
-      <section className="bg-gray-background pt-20">
+      <section className="bg-gray-background py-20">
         <div className="bg-aqua rounded-3xl w-10/12 mx-auto min-h-96 py-10 px-10 space-y-10"
           style={{
             backgroundImage: `url(${ASSETS.OUR_PROJECT.OUR_PROJECT_PATTERN.src})`,
@@ -209,7 +210,9 @@ export default function Home() {
         </div>
       </section >
 
-      {/* <Footer /> */}
+          <div className="">
+          <Footer />
+          </div>
     </div >
   );
 }

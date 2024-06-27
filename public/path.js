@@ -9,6 +9,7 @@ import iPRICING from './icons/data-analysis/pricing.svg'
 
 // IMAGES
 import LOGO from "./images/logo.svg";
+import LOGO_BLACK from "./images/logo-black.svg";
 
 import HERO from "./images/hero.svg";
 
@@ -53,6 +54,7 @@ export const ASSETS = {
   },
   LOGO: {
     LOGO,
+    LOGO_BLACK
   },
   VISA_LOGO: {
     VISA_LOGO,
