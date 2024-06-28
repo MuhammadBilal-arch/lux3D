@@ -45,7 +45,7 @@ export default function UploadPlat() {
                                     </div> : steps === 2 ?
                                         <div className="bg-blend-overlay max-h-32 bg-white bg-opacity-30 py-2 space-y-2 overflow-y-scroll backdrop-blur-sm px-4 rounded-xl w-full ">
                                             <div className="flex space-x-2 items-center text-white">
-                                                <img src={ASSETS.ICONS.DATA_ANALYSIS.iGUARD.src} alt="" className="w-7 h-7" />
+                                                <img src={ASSETS.POOL.LOGO.POOL_TITLE_1.src} alt="" className="w-7 h-7" />
                                                 <div className="font-semibold text-sm">Pool Shape</div>
                                             </div>
                                             <div className="grid grid-cols-2 gap-4 bg-white bg-opacity-10">
@@ -73,7 +73,7 @@ export default function UploadPlat() {
                                         </div> : steps === 3 ?
                                             <div className="bg-blend-overlay max-h-[26rem] bg-white bg-opacity-30 py-2 space-y-2 overflow-y-scroll backdrop-blur-sm px-4 rounded-xl w-full ">
                                                 <div className="flex space-x-2 items-center text-white">
-                                                    <img src={ASSETS.ICONS.DATA_ANALYSIS.iGUARD.src} alt="" className="w-7 h-7" />
+                                                    <img src={ASSETS.POOL.LOGO.POOL_TITLE_2.src} alt="" className="w-7 h-7" />
                                                     <div className="font-semibold text-sm">Tile & Coping materials</div>
                                                 </div>
                                                 <div className="grid grid-cols-2 gap-4">
@@ -143,7 +143,7 @@ export default function UploadPlat() {
                                             </div> : steps === 4 ?
                                                 <div className="bg-blend-overlay max-h-[26rem] bg-white bg-opacity-30 py-2 space-y-2 overflow-y-scroll backdrop-blur-sm px-4 rounded-xl w-full ">
                                                     <div className="flex space-x-2 items-center text-white">
-                                                        <img src={ASSETS.ICONS.DATA_ANALYSIS.iGUARD.src} alt="" className="w-7 h-7" />
+                                                        <img src={ASSETS.POOL.LOGO.POOL_TITLE_3.src} alt="" className="w-7 h-7" />
                                                         <div className="font-semibold text-sm">Decking</div>
                                                     </div>
                                                     <div className="grid grid-cols-2 gap-4">
@@ -213,7 +213,7 @@ export default function UploadPlat() {
                                                 </div> :
                                                 <div className="bg-blend-overlay min-w-full bg-white bg-opacity-30 py-2 backdrop-blur-sm px-4 rounded-xl w-[300px] ">
                                                     <div className="flex space-x-2 items-center text-white">
-                                                        <img src={ASSETS.ICONS.DATA_ANALYSIS.iGUARD.src} alt="" className="w-7 h-7" />
+                                                        <img src={ASSETS.POOL.LOGO.POOL_TITLE_4.src} alt="" className="w-7 h-7" />
                                                         <div className="font-semibold text-sm">LUX3D AI Assist</div>
                                                     </div>
                                                     <div className="flex text-sm items-center space-x-2 w-full text-white">
@@ -245,6 +245,7 @@ export default function UploadPlat() {
                 </div>
                 <div className="flex items-center justify-center space-x-4 pb-10 w-11/12 mx-auto">
                     <TransparentButton
+                    onHandleClick={()=>setSteps(steps - 1)}
                         title={'Back'}
                         textColor="text-white"
                         borderColor="border-white"

@@ -18,6 +18,12 @@ import iSIZE from './icons/quote-ready/size.svg'
 import iSPA from './icons/quote-ready/spa.svg'
 import iTHANK_YOU from './icons/quote-ready/thank-you.svg'
 
+// POOL
+import POOL_TITLE_1 from './icons/pool/2.svg'
+import POOL_TITLE_2 from './icons/pool/3.svg'
+import POOL_TITLE_3 from './icons/pool/4.svg'
+import POOL_TITLE_4 from './icons/pool/5.svg'
+
 // IMAGES
 import LOGO from "./images/logos/logo.svg";
 import LOGO_WHITE from "./images/logos/logo-white.svg";
@@ -153,6 +159,13 @@ export const ASSETS = {
       DECKING_6,
       DECKING_7,
       DECKING_8
+
+    },
+    LOGO:{
+      POOL_TITLE_1,
+      POOL_TITLE_2,
+      POOL_TITLE_3,
+      POOL_TITLE_4,
 
     }
   }
