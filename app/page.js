@@ -9,6 +9,7 @@ import { ASSETS } from "@/public/path";
 import Link from "next/link";
 import { WeOffers } from "@/components/carousel/offers";
 import { Footer } from "@/components/footer";
+import Image from "next/image";
 
 export default function Home() {
   return (
@@ -22,10 +23,13 @@ export default function Home() {
         mx-auto  flex min-h-96 md:min-h-screen 2xl:min-h-[750px]  px-5 sm:px-12 md:px-14 lg:px-20`}
       >
         <div className="absolute left-0 w-full h-full lg:h-auto  2xl:h-full">
-          <img
+          <Image
             src={ASSETS.HEADER.HERO.src}
             alt=""
-            className="min-h- md:min-h-screen  h-full  w-full object-cover"
+            layout="fill"
+            objectFit="cover"
+            priority={true} // Ensures it loads as a high priority image
+            className=" md:min-h-screen  h-full  w-full object-cover"
           />
         </div>
         <div className="flex items-center justify-center text-center w-full z-10">
@@ -41,10 +45,10 @@ export default function Home() {
             </div>
 
             <div className="flex flex-col md:flex-row items-center justify-between space-y-4 md:space-y-0 md:space-x-4 w-full ">
-              <Link href="/toxicology">
+              <Link href="/">
                 <TransparentButton title={"General Shareholders 2024"} />
               </Link>
-              <Link href="/toxicology">
+              <Link href="/">
                 <ColoredButton
                   title={"Results Presentation Q1 2024"}
                   background={'bg-aqua'}
@@ -52,7 +56,7 @@ export default function Home() {
                   borderColor={'border-aqua'}
                 />
               </Link>
-              <Link href="/toxicology">
+              <Link href="/">
                 <ColoredButton
                   title={"Annual Integrated Report 2023"}
                   background={'bg-black'}
@@ -210,9 +214,9 @@ export default function Home() {
         </div>
       </section >
 
-          <div className="">
-          <Footer />
-          </div>
+      <div className="">
+        <Footer />
+      </div>
     </div >
   );
 }

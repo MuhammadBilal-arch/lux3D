@@ -18,6 +18,7 @@ module.exports = {
     // },
     extend: {
       backgroundImage: {
+        "gray-gradient": "linear-gradient(to right, #f5f5f5 , #FEFEFE)",
         "black-gradient": "linear-gradient(to bottom, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0))",
         "red-gradient": "linear-gradient(to bottom right, #880808, #FA5F55)",
         "green-gradient": "linear-gradient(to right, #145B13, #1EB61A)",

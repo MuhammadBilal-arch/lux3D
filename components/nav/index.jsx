@@ -59,7 +59,7 @@ export const Nav = () => {
           />
         </div>
         <div className="hidden md:block">
-          <Link href="/toxicology">
+          <Link href="/ai-involvement">
             <WhiteButton title="Get Quote" type={"button"} />
           </Link>
         </div>
