@@ -3,6 +3,10 @@ import Image from "next/image";
 import dynamic from 'next/dynamic';
 import Head from "next/head";
 
+const Nav = dynamic(() => import('@/components/nav'), { ssr: false });
+const WeOffers = dynamic(() => import('@/components/carousel/offers'), { ssr: false });
+const Footer = dynamic(() => import('@/components/footer'), { ssr: false });
+
 import {
   ColoredButton,
   TransparentButton,
@@ -12,9 +16,6 @@ import { ProjectCard } from "@/components/cards/projects/card";
 import { ASSETS } from "@/public/path";
 
 
-const Nav = dynamic(() => import('@/components/nav'), { ssr: false });
-const WeOffers = dynamic(() => import('@/components/carousel/offers'), { ssr: false });
-const Footer = dynamic(() => import('@/components/footer'), { ssr: false });
 
 export default function Home() {
   return (

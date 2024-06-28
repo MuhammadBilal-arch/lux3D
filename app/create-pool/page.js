@@ -2,7 +2,6 @@
 import {
     ColoredButton,
     TransparentButton,
-    WhiteButton,
 } from "@/components/buttons";
 import RangeSlider from "@/components/range-slider";
 import { ASSETS } from "@/public/path";
@@ -28,6 +27,7 @@ export default function UploadPlat() {
                     <div>
                         <img
                             src={ASSETS.LOGO.LOGO_WHITE.src}
+                            alt=""
                             className="w-20 h-20 sm:w-20 sm:h-20 md:w-28 md:h-28 mx-auto"
                         />
                         <div className="w-11/12 mx-auto flex flex-col  h-full items-center justify-between">

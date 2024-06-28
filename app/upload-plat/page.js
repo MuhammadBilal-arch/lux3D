@@ -104,6 +104,7 @@ export default function UploadPlat() {
                             <div className="w-full mx-auto space-y-4 py-10">
                                 <img
                                     src={ASSETS.LOGO.LOGO_WHITE.src}
+                                    alt=""
                                     className="w-20 h-20 sm:w-20 sm:h-20 md:w-28 md:h-28 lg:h-32 lg:w-32 mx-auto"
                                 />
                                 <div

@@ -22,6 +22,7 @@ export default function UploadPlat() {
             <div className="flex flex-col items-center justify-center text-center relative">
                 <img
                     src={ASSETS.LOGO.LOGO_WHITE.src}
+                    alt=""
                     className="w-20 h-20 sm:w-20 sm:h-20 md:w-28 md:h-28 mx-auto"
                 />
                 <div className="">
@@ -56,28 +57,28 @@ export default function UploadPlat() {
                         <div className="font-semibold text-sm md:text-base lg:text-lg">Pool Specification:</div>
                         <div className="grid grid-cols-2 gap-4">
                             <div className="bg-gray-gradient w-full space-x-2 flex items-center p-1.5 rounded-full">
-                                <img src={ASSETS.ICONS.QUOTE.iAREA.src}/>
+                                <img src={ASSETS.ICONS.QUOTE.iAREA.src} alt=""/>
                                 <div className="flex flex-col justify-between">
                                     <div className="text-aqua text-sm font-semibold">Area:</div>
                                     <div className="text-black text-xs">600 sqft</div>
                                 </div>
                             </div>
                             <div className="bg-gray-gradient w-full space-x-2 flex items-center p-1.5 rounded-full">
-                                <img src={ASSETS.ICONS.QUOTE.iSIZE.src}/>
+                                <img src={ASSETS.ICONS.QUOTE.iSIZE.src} alt=""/>
                                 <div className="flex flex-col justify-between">
                                     <div className="text-aqua text-sm font-semibold">Size:</div>
                                     <div className="text-black text-xs">16 x 30</div>
                                 </div>
                             </div>
                             <div className="bg-gray-gradient w-full space-x-2 flex items-center p-1.5 rounded-full">
-                                <img src={ASSETS.ICONS.QUOTE.iDECKING.src}/>
+                                <img src={ASSETS.ICONS.QUOTE.iDECKING.src} alt=""/>
                                 <div className="flex flex-col justify-between">
                                     <div className="text-aqua text-sm font-semibold">Decking</div>
                                     <div className="text-black text-xs">Spray Deck</div>
                                 </div>
                             </div>
                             <div className="bg-gray-gradient w-full space-x-2 flex items-center p-1.5 rounded-full">
-                                <img src={ASSETS.ICONS.QUOTE.iSPA.src}/>
+                                <img src={ASSETS.ICONS.QUOTE.iSPA.src} alt=""/>
                                 <div className="flex flex-col justify-between">
                                     <div className="text-aqua text-sm font-semibold">Spa</div>
                                     <div className="text-black text-xs">Round</div>
