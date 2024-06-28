@@ -1,6 +1,8 @@
 import Link from "next/link";
 import Image from "next/image";
 import dynamic from 'next/dynamic';
+import Head from "next/head";
+
 import {
   ColoredButton,
   TransparentButton,
@@ -9,6 +11,7 @@ import { Card } from "@/components/cards/services/card";
 import { ProjectCard } from "@/components/cards/projects/card";
 import { ASSETS } from "@/public/path";
 
+
 const Nav = dynamic(() => import('@/components/nav'), { ssr: false });
 const WeOffers = dynamic(() => import('@/components/carousel/offers'), { ssr: false });
 const Footer = dynamic(() => import('@/components/footer'), { ssr: false });
@@ -16,6 +19,12 @@ const Footer = dynamic(() => import('@/components/footer'), { ssr: false });
 export default function Home() {
   return (
     <div className="max-w-[1440px] mx-auto relative overflow-hidden">
+      <Head>
+        <title>Home - Lux 3D</title>
+        <meta name="description" content="The perfect pool & wellness experience" />
+        <link rel="preload" href={ASSETS.HEADER.HERO.src} as="image" />
+        {/* <link rel="preload" href="/path/to/font.woff2" as="font" type="font/woff2" crossOrigin="anonymous" /> */}
+      </Head>
       <Nav />
       {/* HERO SECTION */}
       <main
@@ -27,8 +36,9 @@ export default function Home() {
         <div className="absolute left-0 w-full h-full lg:h-auto  2xl:h-full">
           <Image
             src={ASSETS.HEADER.HERO.src}
-            alt=""
+            alt="Hero Image"
             layout="fill"
+            quality={75}
             objectFit="cover"
             priority={true} // Ensures it loads as a high priority image
             className=" md:min-h-screen  h-full  w-full object-cover"
