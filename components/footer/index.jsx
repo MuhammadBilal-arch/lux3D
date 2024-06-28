@@ -1,9 +1,9 @@
 import { ASSETS } from "@/public/path";
-import React from "react";
+import React, { memo } from "react";
 import { RiTwitterXFill } from "react-icons/ri";
 import { FaFacebookF } from "react-icons/fa";
 import { FaInstagram } from "react-icons/fa6";
-export const Footer = () => {
+const Footer = () => {
   return (
     <main
 
@@ -31,3 +31,5 @@ export const Footer = () => {
     </main>
   );
 };
+
+export default memo(Footer)

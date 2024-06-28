@@ -1,12 +1,12 @@
 'use client'
-import React, { useRef, useState } from 'react';
+import React, { memo, useRef } from 'react';
 import Slider from 'react-slick';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
 import { ASSETS } from '@/public/path';
 import { HiMiniArrowSmallRight, HiMiniArrowSmallLeft } from "react-icons/hi2";
 
-export const WeOffers = () => {
+const WeOffers = () => {
     const sliderRef = useRef(null);
 
     const LANGUAGES = [
@@ -112,5 +112,7 @@ export const WeOffers = () => {
         </div>
     );
 };
+
+export default memo(WeOffers)
 
 

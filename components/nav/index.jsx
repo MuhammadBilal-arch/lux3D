@@ -1,11 +1,13 @@
 "use client";
+
+import Link from "next/link";
+import { useEffect, useRef, useState , memo} from "react";
+import { RiCloseFill } from "react-icons/ri";
+import { GiHamburgerMenu } from "react-icons/gi";
 import { ASSETS } from "@/public/path";
 import { WhiteButton } from "../buttons";
-import Link from "next/link";
-import { GiHamburgerMenu } from "react-icons/gi";
-import { useEffect, useRef, useState } from "react";
-import { RiCloseFill } from "react-icons/ri";
-export const Nav = () => {
+
+const Nav = () => {
   const [drawerState, setDrawerState] = useState(false);
   const drawerRef = useRef(null);
   const onToggleDrawer = () => {
@@ -94,3 +96,5 @@ export const Nav = () => {
     </>
   );
 };
+
+export default memo(Nav)

@@ -1,15 +1,17 @@
+import Link from "next/link";
+import Image from "next/image";
+import dynamic from 'next/dynamic';
 import {
   ColoredButton,
   TransparentButton,
 } from "@/components/buttons";
 import { Card } from "@/components/cards/services/card";
 import { ProjectCard } from "@/components/cards/projects/card";
-import { Nav } from "@/components/nav";
 import { ASSETS } from "@/public/path";
-import Link from "next/link";
-import { WeOffers } from "@/components/carousel/offers";
-import { Footer } from "@/components/footer";
-import Image from "next/image";
+
+const Nav = dynamic(() => import('@/components/nav'), { ssr: false });
+const WeOffers = dynamic(() => import('@/components/carousel/offers'), { ssr: false });
+const Footer = dynamic(() => import('@/components/footer'), { ssr: false });
 
 export default function Home() {
   return (
@@ -32,9 +34,13 @@ export default function Home() {
             className=" md:min-h-screen  h-full  w-full object-cover"
           />
         </div>
-        <div className="flex items-center justify-center text-center w-full z-10">
+        <div
+          data-aos="fade-up"
+          className="flex items-center justify-center text-center w-full z-10">
           <div className=" space-y-4 md:space-y-6 lg:space-y-8 ">
-            <div className="relative heading-1 text-white font-semibold z-10">
+            <div
+
+              className="relative heading-1 text-white font-semibold z-10">
               <div className="relative text-xl sm:text-2xl md:text-3xl lg:text-4xl  lg:leading-[50px] uppercase">
                 The perfect pool & wellness <br /> experience
               </div>
@@ -71,11 +77,15 @@ export default function Home() {
       {/* OUR SERVICES */}
       <section className="bg-gray-background pt-20  mx-auto space-y-16">
 
-        <div className="text-center">
+        <div
+          data-aos="fade-down"
+          className="text-center">
           <div className="text-aqua font-semibold text-xl lg:text-2xl xl:text-4xl 2xl:text-5xl">Our Services</div>
         </div>
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-4 w-11/12 lg:w-8/12 mx-auto">
+        <div
+          data-aos="fade-up"
+          className="grid md:grid-cols-2 lg:grid-cols-3 gap-4 w-11/12 lg:w-8/12 mx-auto">
           <Card
             image={ASSETS.OUR_SERVICES.SERVICE_1}
             icon={ASSETS.ICONS.SERVICES.SERVICES_1}
@@ -109,12 +119,18 @@ export default function Home() {
           <div className="bg-aqua-1000 self-end w-11/12 min-h-96 rounded-tl-[30px] rounded-bl-[70px]">
             <div className="w-full flex flex-col lg:flex-row items-center min-h-[28rem] p-5 lg:p-0">
 
-              <div className="lg:w-1/2 lg:-mb-52">
+              <div
+                data-aos="fade-down"
+                data-aos-duration="1000"
+                className="lg:w-1/2 lg:-mb-52">
                 <img src={ASSETS.DATA_ANALYSIS.DATA_ANALYSIS_CHART.src} alt="" className="max-h-[28rem] min-h-[28rem] w-full" />
               </div>
               <div className="lg:w-1/2 lg:-mb-52 flex flex-col items-start min-h-[28rem] justify-start text-white space-y-8">
 
-                <div className="flex items-center space-x-4 w-full">
+                <div
+                  data-aos="fade-left"
+                  data-aos-duration="1000"
+                  className="flex items-center space-x-4 w-full">
                   <div className="flex flex-col items-center justify-between">
                     <div className="min-h-10 min-w-10">
                       <img src={ASSETS.ICONS.DATA_ANALYSIS.iGUARD.src} className="w-10 h-10" />
@@ -128,7 +144,10 @@ export default function Home() {
                     </div>
                   </div>
                 </div>
-                <div className="flex items-center space-x-4 w-full">
+                <div
+                  data-aos="fade-left"
+                  data-aos-duration="2000"
+                  className="flex items-center space-x-4 w-full">
                   <div className="flex flex-col items-center justify-between">
                     <div className="min-h-10 min-w-10">
                       <img src={ASSETS.ICONS.DATA_ANALYSIS.iFEATURE.src} className="w-10 h-10" />
@@ -142,7 +161,10 @@ export default function Home() {
                     </div>
                   </div>
                 </div>
-                <div className="flex items-center space-x-4 w-full">
+                <div
+                  data-aos="fade-left"
+                  data-aos-duration="3000"
+                  className="flex items-center space-x-4 w-full">
                   <div className="flex flex-col items-center justify-center">
                     <div className="min-h-10 min-w-10">
                       <img src={ASSETS.ICONS.DATA_ANALYSIS.iPRICING.src} className="w-10 h-10" />
@@ -175,48 +197,51 @@ export default function Home() {
         </div>
       </section>
       {/* OUR PROJECTS */}
-      <section className="bg-gray-background py-20">
-        <div className="bg-aqua rounded-3xl w-10/12 mx-auto min-h-96 py-10 px-10 space-y-10"
-          style={{
-            backgroundImage: `url(${ASSETS.OUR_PROJECT.OUR_PROJECT_PATTERN.src})`,
-            backgroundSize: 'cover',
-            backgroundPosition: 'center',
-            // width: '100%',
-          }}
+      <section
+        className="bg-gray-background py-20">
+        <div
+          data-aos="fade-down"
+        className="bg-aqua rounded-3xl w-10/12 mx-auto min-h-96 py-10 px-10 space-y-10"
+        style={{
+          backgroundImage: `url(${ASSETS.OUR_PROJECT.OUR_PROJECT_PATTERN.src})`,
+          backgroundSize: 'cover',
+          backgroundPosition: 'center',
+          // width: '100%',
+        }}
         >
-          <div className="text-center">
-            <div className="text-white font-semibold text-xl lg:text-2xl xl:text-4xl 2xl:text-5xl">Our Projects</div>
-          </div>
-          <div className="grid sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 mx-auto">
-            <ProjectCard
-              image={ASSETS.OUR_PROJECT.OUR_PROJECT_1}
-              headingOne={'Tranquil Garden Pool'}
-              paragraph={'Lorem ipsum is a placeholder text commonly used to demonstrate the visual form of a document.'}
-            />
-            <ProjectCard
-              image={ASSETS.OUR_PROJECT.OUR_PROJECT_2}
-              headingOne={'Luxurious Poolside '}
-              paragraph={'Lorem ipsum is a placeholder text commonly used to demonstrate the visual form of a document.'}
-            />
-            <ProjectCard
-              image={ASSETS.OUR_PROJECT.OUR_PROJECT_3}
-              headingOne={'Sleek Lap Pool'}
-              paragraph={'Lorem ipsum is a placeholder text commonly used to demonstrate the visual form of a document.'}
-            />
-            <ProjectCard
-              image={ASSETS.OUR_PROJECT.OUR_PROJECT_4}
-              headingOne={'Modern Family Pool'}
-              paragraph={'Lorem ipsum is a placeholder text commonly used to demonstrate the visual form of a document.'}
-            />
-          </div>
-
-
+        <div className="text-center">
+          <div className="text-white font-semibold text-xl lg:text-2xl xl:text-4xl 2xl:text-5xl">Our Projects</div>
         </div>
+        <div className="grid sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 mx-auto">
+          <ProjectCard
+            image={ASSETS.OUR_PROJECT.OUR_PROJECT_1}
+            headingOne={'Tranquil Garden Pool'}
+            paragraph={'Lorem ipsum is a placeholder text commonly used to demonstrate the visual form of a document.'}
+          />
+          <ProjectCard
+            image={ASSETS.OUR_PROJECT.OUR_PROJECT_2}
+            headingOne={'Luxurious Poolside '}
+            paragraph={'Lorem ipsum is a placeholder text commonly used to demonstrate the visual form of a document.'}
+          />
+          <ProjectCard
+            image={ASSETS.OUR_PROJECT.OUR_PROJECT_3}
+            headingOne={'Sleek Lap Pool'}
+            paragraph={'Lorem ipsum is a placeholder text commonly used to demonstrate the visual form of a document.'}
+          />
+          <ProjectCard
+            image={ASSETS.OUR_PROJECT.OUR_PROJECT_4}
+            headingOne={'Modern Family Pool'}
+            paragraph={'Lorem ipsum is a placeholder text commonly used to demonstrate the visual form of a document.'}
+          />
+        </div>
+
+
+    </div>
       </section >
 
-      <div className="">
-        <Footer />
-      </div>
+    <div className="">
+      <Footer />
+    </div>
     </div >
   );
 }
