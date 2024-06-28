@@ -15,8 +15,6 @@ import { Card } from "@/components/cards/services/card";
 import { ProjectCard } from "@/components/cards/projects/card";
 import { ASSETS } from "@/public/path";
 
-
-
 export default function Home() {
   return (
     <div className="max-w-[1440px] mx-auto relative overflow-hidden">
@@ -24,7 +22,6 @@ export default function Home() {
         <title>Home - Lux 3D</title>
         <meta name="description" content="The perfect pool & wellness experience" />
         <link rel="preload" href={ASSETS.HEADER.HERO.src} as="image" />
-        {/* <link rel="preload" href="/path/to/font.woff2" as="font" type="font/woff2" crossOrigin="anonymous" /> */}
       </Head>
       <Nav />
       {/* HERO SECTION */}
@@ -32,7 +29,7 @@ export default function Home() {
         className={`
         relative
         w-full   
-        mx-auto  flex min-h-96 md:min-h-screen 2xl:min-h-[750px]  px-5 sm:px-12 md:px-14 lg:px-20`}
+        mx-auto  flex  md:min-h-screen 2xl:min-h-[750px]  px-5 sm:px-12 md:px-14 lg:px-20`}
       >
         <div className="absolute left-0 w-full h-full lg:h-auto  2xl:h-full">
           <Image
@@ -42,11 +39,13 @@ export default function Home() {
             quality={75}
             objectFit="cover"
             priority={true} // Ensures it loads as a high priority image
+            placeholder="blur"
+            blurDataURL="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wCEAAkGBxISEhUTEhIVFRUVFRUVFRUWFxUVFRUWFxUXFhUVFRUYHSggGBolHRUVITEhJSkrLi4uFx8zODMtNygtLisBCgoKDg0OGxAQGy0lICUtLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLf/AABEIARUAtwMBIgACEQEDEQH/xAAXAAEBAQEAAAAAAAAAAAAAAAABAgAD/8QAHxAAAgICAQUAAAAAAAAAAAAAAAECABEDBBIhIjEy/9oADAMBAAIQAxAAAAG9uE2gdiE3ZdM/2Q=="
             className=" md:min-h-screen  h-full  w-full object-cover"
           />
         </div>
         <div
-          data-aos="fade-up"
+          // data-aos="fade-up"
           className="flex items-center justify-center text-center w-full z-10">
           <div className=" space-y-4 md:space-y-6 lg:space-y-8 ">
             <div

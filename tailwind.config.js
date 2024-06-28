@@ -19,21 +19,6 @@ module.exports = {
     extend: {
       backgroundImage: {
         "gray-gradient": "linear-gradient(to right, #f5f5f5 , #FEFEFE)",
-        "black-gradient": "linear-gradient(to bottom, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0))",
-        "red-gradient": "linear-gradient(to bottom right, #880808, #FA5F55)",
-        "green-gradient": "linear-gradient(to right, #145B13, #1EB61A)",
-        "green-secondary-gradient":
-          "linear-gradient(to right,#1EB61A, #145B13 )",
-        "multi-gradient":
-          "linear-gradient(to right, #00E5BC,#32CC2E )",
-        "blue-gradient": "linear-gradient(to bottom right, #012C5F, #044A9D)",
-        "blue-normal-gradient":
-          "linear-gradient(to bottom right, #044A9D,#012C5F)",
-        "blue-secondary-gradient":
-          "linear-gradient(to bottom right,#0461CD, #012C5F )",
-        "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
-        "gradient-conic":
-          "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
       },
       colors: {
         green: "#32CC2E",
