@@ -14,7 +14,7 @@ const Quote = () => {
     const router = useRouter()
 
     return (
-        <div className="bg-cover md:max-h-screen bg-bottom w-full min-h-screen 2xl:min-h-full pb-20 max-w-[1440px] bg-no-repeat mx-auto" style={{ backgroundImage: `url(${ASSETS.BACKGROUND.bgQUOTE_SCREEN.src})` }}>
+        <div className="bg-cover flex flex-col items-center justify-center md:max-h-screen bg-bottom w-full min-h-screen 2xl:min-h-screen pb-20 max-w-[1440px] bg-no-repeat mx-auto" style={{ backgroundImage: `url(${ASSETS.BACKGROUND.bgQUOTE_SCREEN.src})` }}>
             <div className="flex flex-col items-center justify-center text-center relative">
                 <img
                     src={ASSETS.LOGO.LOGO_WHITE.src}
@@ -22,10 +22,10 @@ const Quote = () => {
                     className="w-20 h-20 sm:w-20 sm:h-20 md:w-28 md:h-28 mx-auto"
                 />
                 <div className="">
-                    <div className="mx-auto text-xl sm:text-2xl md:text-xl lg:text-2xl text-white">
+                    <div className="mx-auto text-xl sm:text-2xl md:text-xl lg:text-2xl 2xl:text-3xl text-white">
                         Your Quote is Ready
                     </div>
-                    <div className="text-white text-xs w-10/12 md:w-7/12 mx-auto">
+                    <div className="text-white text-xs 2xl:text-sm w-10/12 md:w-7/12 mx-auto">
                         If you have any questions or need further customization, feel free to contact us. Thank you for choosing our services!
                     </div>
 
@@ -37,11 +37,11 @@ const Quote = () => {
                     <img src={ASSETS.ICONS.QUOTE.iTHANK_YOU.src} alt="" className="h-24" />
                 </div>
                 <div className="space-y-2 text-center md:w-1/2 lg:w-1/3">
-                    <div className="text-center text-xs text-gray-100">
+                    <div className="text-center text-xs 2xl:text-sm text-gray-100">
                         Plasse review the quote make sure everything
                         is accrate before proceeding
                     </div>
-                    <div className="text-center font-semibold text-lg md:text-lg lg:text-xl text-gray-text">
+                    <div className="text-center font-semibold text-lg md:text-lg lg:text-xl 2xl:text-2xl text-gray-text">
                         $344.00
                     </div>
                 </div>

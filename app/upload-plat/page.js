@@ -86,7 +86,7 @@ export default function UploadPlat() {
                 w-full   
                 mx-auto flex min-h-screen  max-h-screen  py-4 sm:py-0 sm:px-12 md:px-14 lg:px-20`}
             >
-                <div className="absolute bg-red left-0 w-full h-full lg:h-auto  2xl:h-full">
+                <div className="absolute  left-0 w-full h-full lg:h-auto  2xl:h-full">
                     <Image
                         src={ASSETS.BACKGROUND.bgUPLOAD_PLAT_SCREEN.src}
                         alt=""

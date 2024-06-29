@@ -84,7 +84,7 @@ const RangeSlider = () => {
                         style={{ left: `${percentage}%` }}
                         ref={thumbRef}
                     >
-                        <div className="relative bg-red top-3 left-8 -mt-2 w-1">
+                        <div className="relative top-3 left-8 -mt-2 w-1">
                             <div className="absolute   z-40 opacity-100 bottom-full mb-2 left-1/2 transform -translate-x-1/2 min-w-full">
                                 <div className="relative shadow-md">
                                     <div className="bg-white text-black truncate text-[0.7rem] rounded-full rounded-bl-2xl py-0.5 px-3">
