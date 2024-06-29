@@ -1,21 +1,22 @@
 'use client'
+import { memo, useCallback, useState } from "react";
+import Link from "next/link";
+import Image from "next/image";
+
 import {
     ColoredButton,
     TransparentButton,
 } from "@/components/buttons";
 import { ASSETS } from "@/public/path";
-import Link from "next/link";
-
-import Image from "next/image";
 import { AiInvolvementCard } from "@/components/cards/ai-involvement/card";
-import { useState } from "react";
 
-export default function Home() {
+const AiInvolvement = () => {
     const [selectType, setSelectType] = useState(2)
 
-    const onSelectType = (id) => {
+    const onSelectType = useCallback((id) => {
         setSelectType(id)
-    }
+    })
+    
     return (
         <div className="max-w-[1440px] mx-auto relative overflow-hidden">
 
@@ -102,3 +103,5 @@ export default function Home() {
         </div >
     );
 }
+
+export default memo(AiInvolvement)

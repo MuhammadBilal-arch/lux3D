@@ -14,6 +14,7 @@ const DataAnalysis = dynamic(() => import('@/components/sections/landing-page/da
 const WhatWeOffer = dynamic(() => import('@/components/sections/landing-page/what-we-offer'), { ssr: false });
 const OurProjects = dynamic(() => import('@/components/sections/landing-page/our-projects'), { ssr: false });
 const Footer = dynamic(() => import('@/components/footer'), { ssr: false });
+const ScrollToTopButton = dynamic(() => import('@/components/scrollToTop'), { ssr: false });
 
 
 export default function Home() {
@@ -31,7 +32,7 @@ export default function Home() {
         className={`
         relative
         w-full   
-        mx-auto  flex  md:min-h-screen 2xl:min-h-[750px]  px-5 sm:px-12 md:px-14 lg:px-20`}
+        mx-auto  flex  md:min-h-screen  px-5 sm:px-12 md:px-14 lg:px-20`}
       >
         <div className="absolute left-0 w-full h-full lg:h-auto  2xl:h-full">
           <Image
@@ -97,6 +98,8 @@ export default function Home() {
       <div className="">
         <Footer />
       </div>
+
+      <ScrollToTopButton/>
     </div >
   );
 }
