@@ -12,6 +12,7 @@ import { BiSolidFileFind } from "react-icons/bi";
 import { useState } from "react";
 import { MdDelete } from "react-icons/md";
 import { useRouter } from "next/navigation";
+import Head from "next/head";
 
 export default function UploadPlat() {
     const router = useRouter()
@@ -19,6 +20,7 @@ export default function UploadPlat() {
     const [file, setFile] = useState(null);
     const [detectingArea, setDetectingArea] = useState(false)
     const [areaDetected, setAreaDetected] = useState(false)
+    const [loading , setLoading] = useState(true)
 
     const handleDragOver = (e) => {
         e.preventDefault();
@@ -73,13 +75,18 @@ export default function UploadPlat() {
                 setDetectingArea(false)
                 setAreaDetected(false)
                 router.push('/create-pool')
-            },3000);
+            }, 3000);
         }, 10 * 1000);
     }
 
-    
+
     return (
         <div className="max-w-[1440px] mx-auto relative overflow-hidden">
+            <Head>
+                <title>Upload Plat - Lux 3D</title>
+                <meta name="upload plat" content="The perfect pool & wellness experience" />
+                <link rel="preload" href={ASSETS.BACKGROUND.bgUPLOAD_PLAT_SCREEN.src} as="image" />
+            </Head>
             <main
                 className={`
                 relative
@@ -93,6 +100,9 @@ export default function UploadPlat() {
                         layout="fill"
                         objectFit="cover"
                         priority={true}
+                        quality={75}
+                        onLoad={() => setLoading(false)}
+                        onError={() => setLoading(true)}
                         className=" min-h-screen  h-full  w-full object-cover"
                     />
                 </div>

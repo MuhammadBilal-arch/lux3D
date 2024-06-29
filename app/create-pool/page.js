@@ -12,11 +12,14 @@ import { PoolItemsCard } from "@/components/cards/create-pool/card";
 import RadioButtons from "@/components/radio/create-pool";
 
 import { ASSETS } from "@/public/path";
+import Loading from "../loading";
+import Head from "next/head";
 
 const CreatePool = () => {
     const router = useRouter()
     const [steps, setSteps] = useState(1)
     const [selectPool, setSelectPool] = useState(1)
+    const [loading , setLoading] = useState(true)
 
 
     const PoolTiles = [
@@ -75,6 +78,12 @@ const CreatePool = () => {
     return (
         <div
             className="bg-cover relative md:max-h-screen  bg-bottom w-full min-h-screen 2xl:min-h-full pb-20 max-w-[1440px] bg-no-repeat mx-auto">
+            <Head>
+                <title>Create Pool - Lux 3D</title>
+                <meta name="create pool" content="The perfect pool & wellness experience" />
+                <link rel="preload" href={ASSETS.BACKGROUND.bgPOOL_MODEL_SCREEN.src} as="image" />
+            </Head>
+            {loading && <Loading />}
             <div className="relative w-full h-full flex">
                 <div className="w-[25%] flex flex-col items-center justify-between bg-blend-overlay bg-black bg-opacity-50 backdrop-blur-sm z-10 min-h-screen">
                     <div className="flex flex-col items-center justify-between  text-center">
@@ -181,6 +190,8 @@ const CreatePool = () => {
                     objectFit="cover"
                     priority={true} // Ensures it loads as a high priority image
                     placeholder="blur"
+                    onLoad={() => setLoading(false)}
+                    onError={() => setLoading(true)}
                     blurDataURL="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wCEAAkGBxISEhUTEhIVFRUVFRUVFRUWFxUVFRUWFxUXFhUVFRUYHSggGBolHRUVITEhJSkrLi4uFx8zODMtNygtLisBCgoKDg0OGxAQGy0lICUtLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLf/AABEIARUAtwMBIgACEQEDEQH/xAAXAAEBAQEAAAAAAAAAAAAAAAABAgAD/8QAHxAAAgICAQUAAAAAAAAAAAAAAAECABEDBBIhIjEy/9oADAMBAAIQAxAAAAG9uE2gdiE3ZdM/2Q=="
                     className=" h-full  w-full object-cover"
                 />

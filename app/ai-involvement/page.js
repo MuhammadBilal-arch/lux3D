@@ -9,22 +9,29 @@ import {
 } from "@/components/buttons";
 import { ASSETS } from "@/public/path";
 import { AiInvolvementCard } from "@/components/cards/ai-involvement/card";
+import Head from "next/head";
 
 const AiInvolvement = () => {
     const [selectType, setSelectType] = useState(2)
+    const [loading,setLoading] = useState(true)
 
     const onSelectType = useCallback((id) => {
         setSelectType(id)
     })
-    
+
     return (
         <div className="max-w-[1440px] mx-auto relative overflow-hidden">
+            <Head>
+                <title>Ai Involvement - Lux 3D</title>
+                <meta name="ai invovlement" content="The perfect pool & wellness experience" />
+                <link rel="preload" href={ASSETS.BACKGROUND.bgAI_SCREEN.src} as="image" />
+            </Head>
 
             <main
                 className={`
                 relative
                 w-full   
-                mx-auto flex min-h-96 md:min-h-screen max-h-screen 2xl:min-h-[750px]  px-5 sm:px-12 md:px-14 lg:px-20`}
+                mx-auto flex min-h-96 md:min-h-screen max-h-screen 2xl:min-h-screen  px-5 sm:px-12 md:px-14 lg:px-20`}
             >
                 <div className="absolute left-0 w-full h-full lg:h-auto  2xl:h-full">
                     <Image
@@ -47,6 +54,9 @@ const AiInvolvement = () => {
                                     width={100} // Set the width in pixels
                                     height={100} // Set the height in pixels
                                     priority={true} // Ensures it loads as a high priority image
+                                    quality={75}
+                                    onLoad={() => setLoading(false)}
+                                    onError={() => setLoading(true)}
                                     className="object-contain"
                                 />
                             </div>

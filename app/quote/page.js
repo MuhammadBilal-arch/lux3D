@@ -7,9 +7,6 @@ import {
 } from "@/components/buttons";
 import { ASSETS } from "@/public/path";
 
-
-import Image from "next/image";
-
 const Quote = () => {
     const router = useRouter()
 
