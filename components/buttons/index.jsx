@@ -1,4 +1,5 @@
-export const ColoredButton = ({
+import { memo } from 'react'
+export const ColoredButton = memo(({
   title,
   type,
   onHandleClick,
@@ -17,9 +18,9 @@ export const ColoredButton = ({
       {afterIcon && <div className="px-2">{afterIcon}</div>}
     </button>
   );
-};
+});
 
-export const WhiteButton = ({ title, type, onHandleClick, textColor = "text-black" }) => {
+export const WhiteButton = memo(({ title, type, onHandleClick, textColor = "text-black" }) => {
   return (
     <button
       type={type || "button"}
@@ -29,9 +30,9 @@ export const WhiteButton = ({ title, type, onHandleClick, textColor = "text-blac
       {title}
     </button>
   );
-};
+});
 
-export const TransparentButton = ({ title, type, onHandleClick, textColor = 'text-white' , borderColor="border-white" }) => {
+export const TransparentButton = memo(({ title, type, onHandleClick, textColor = 'text-white' , borderColor="border-white" }) => {
   return (
     <button
       type={type || "button"}
@@ -42,4 +43,4 @@ export const TransparentButton = ({ title, type, onHandleClick, textColor = 'tex
       {title}
     </button>
   );
-};
+});

@@ -78,7 +78,7 @@ const WeOffers = () => {
             <div className="">
                 <div className="overflow-hidden space-y-8">
                     <div className='flex items-center justify-between pr-10'>
-                        <div className="text-aqua font-semibold text-xl lg:text-2xl xl:text-4xl 2xl:text-5xl">Our Services</div>
+                        <div className="text-aqua font-semibold text-xl lg:text-2xl xl:text-4xl 2xl:text-5xl">What we Offer</div>
                         <div className='flex space-x-2'>
                             <div className='cursor-pointer h-12 w-12 rounded-full text-white flex items-center justify-center bg-aqua text-2xl'
                                 onClick={handlePrevClick}><HiMiniArrowSmallLeft /></div>
