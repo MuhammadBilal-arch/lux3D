@@ -85,7 +85,7 @@ const CreatePool = () => {
             </Head>
             {loading && <Loading />}
             <div className="relative w-full h-full flex">
-                <div className="w-[25%] flex flex-col items-center justify-between bg-blend-overlay bg-black bg-opacity-50 backdrop-blur-sm z-10 min-h-screen">
+                <div className="w-11/12 mx-auto lg:mx-0 md:w-1/2 lg:w-[30%] xl:w-[25%] flex flex-col items-center justify-between bg-blend-overlay bg-black bg-opacity-50 backdrop-blur-sm z-10 min-h-screen">
                     <div className="flex flex-col items-center justify-between  text-center">
                         <div className="">
                             <img
@@ -106,7 +106,7 @@ const CreatePool = () => {
                                                 <RangeSlider />
                                             </div>
                                         </div> : steps === 2 ?
-                                            <div className="bg-blend-overlay max-h-32  py-2 space-y-2 overflow-y-scroll  px-4 rounded-xl w-full ">
+                                            <div className="bg-blend-overlay max-h-32  py-2 space-y-2 overflow-y-scroll  px-4 rounded-xl w-full min-w-[300px]">
                                                 <div className="flex space-x-2 items-center text-white">
                                                     <img src={ASSETS.POOL.LOGO.POOL_TITLE_1.src} alt="" className="w-7 h-7" />
                                                     <div className="font-semibold text-sm">Pool Shape</div>
@@ -125,8 +125,8 @@ const CreatePool = () => {
 
                                                 </div>
                                             </div> : steps === 3 ?
-                                                <div className="bg-blend-overlay  bg-white bg-opacity-20 py-4  backdrop-blur-sm rounded-xl w-full ">
-                                                    <div className="overflow-y-auto xl:max-h-[450px] 2xl:max-h-[500px]  space-y-4 px-4">
+                                                <div className="bg-blend-overlay  bg-white bg-opacity-20 py-4  backdrop-blur-sm rounded-xl w-full min-w-[300px]">
+                                                    <div className="overflow-y-auto max-h-[350px] xl:max-h-[450px] 2xl:max-h-[500px]  space-y-4 px-4">
                                                         <div className="flex space-x-2 items-center text-white">
                                                             <img src={ASSETS.POOL.LOGO.POOL_TITLE_2.src} alt="" className="w-7 h-7" />
                                                             <div className="font-medium text-sm">Tile & Coping materials</div>
@@ -138,8 +138,8 @@ const CreatePool = () => {
                                                         </div>
                                                     </div>
                                                 </div> : steps === 4 ?
-                                                    <div className="bg-blend-overlay  bg-white bg-opacity-20 py-4  backdrop-blur-sm  rounded-xl w-full ">
-                                                        <div className="overflow-y-auto xl:max-h-[450px] 2xl:max-h-[500px]  space-y-4 px-4">
+                                                    <div className="bg-blend-overlay  bg-white bg-opacity-20 py-4  backdrop-blur-sm  rounded-xl w-full min-w-[300px] ">
+                                                        <div className="overflow-y-auto max-h-[350px] xl:max-h-[450px] 2xl:max-h-[500px]  space-y-4 px-4">
                                                             <div className="flex space-x-2 items-center text-white">
                                                                 <img src={ASSETS.POOL.LOGO.POOL_TITLE_3.src} alt="" className="w-7 h-7" />
                                                                 <div className="font-semibold text-sm">Decking</div>
@@ -151,7 +151,7 @@ const CreatePool = () => {
                                                             </div>
                                                         </div>
                                                     </div> :
-                                                    <div className="bg-blend-overlay min-w-full bg-white bg-opacity-30 py-2 backdrop-blur-sm px-4 rounded-xl w-[300px] ">
+                                                    <div className="bg-blend-overlay bg-white bg-opacity-30 py-2 backdrop-blur-sm px-4 rounded-xl min-w-[300px] ">
                                                         <div className="flex space-x-2 items-center text-white">
                                                             <img src={ASSETS.POOL.LOGO.POOL_TITLE_4.src} alt="" className="w-7 h-7" />
                                                             <div className="font-semibold text-sm">LUX3D AI Assist</div>
