@@ -2,18 +2,27 @@
 import { memo, useCallback, useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
+import Head from "next/head";
+import dynamic from "next/dynamic";
 
 import {
     ColoredButton,
     TransparentButton,
 } from "@/components/buttons";
 import { ASSETS } from "@/public/path";
-import { AiInvolvementCard } from "@/components/cards/ai-involvement/card";
-import Head from "next/head";
+
+
+const AiInvolvementCard = dynamic(() => import('@/components/cards/ai-involvement/card'), {
+    ssr: false,
+});
+const Loading = dynamic(() => import('../loading'), {
+    ssr: false,
+});
+
 
 const AiInvolvement = () => {
     const [selectType, setSelectType] = useState(2)
-    const [loading,setLoading] = useState(true)
+    const [loading, setLoading] = useState(true)
 
     const onSelectType = useCallback((id) => {
         setSelectType(id)
@@ -25,8 +34,18 @@ const AiInvolvement = () => {
                 <title>Ai Involvement - Lux 3D</title>
                 <meta name="ai invovlement" content="The perfect pool & wellness experience" />
                 <link rel="preload" href={ASSETS.BACKGROUND.bgAI_SCREEN.src} as="image" />
+                <link rel="preload" href={ASSETS.LOGO.LOGO_WHITE.src} as="image" />
+                <link
+                    rel="preload"
+                    href="https://fonts.googleapis.com/css2?family=Metropolis:wght@400;700&display=swap"
+                    as="style"
+                />
+                <link
+                    rel="stylesheet"
+                    href="https://fonts.googleapis.com/css2?family=Metropolis:wght@400;700&display=swap"
+                />
             </Head>
-
+            {loading && <Loading />}
             <main
                 className={`
                 relative
@@ -60,8 +79,8 @@ const AiInvolvement = () => {
                                     className="object-contain"
                                 />
                             </div>
-                            <div className="relative w-10/12 mx-auto text-xl sm:text-2xl md:text-3xl lg:text-4xl  lg:leading-[50px] uppercase">
-                                How involved you like to be in  your new pool design project?
+                            <div class="relative w-full max-w-7xl mx-auto text-xl sm:text-2xl md:text-3xl lg:text-4xl lg:px-6">
+                                HOW INVOLVED YOU LIKE TO BE IN YOUR NEW POOL DESIGN PROJECT?
                             </div>
                         </div>
 

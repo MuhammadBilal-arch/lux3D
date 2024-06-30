@@ -1,6 +1,6 @@
 import React from 'react'
 
-export const AiInvolvementCard = ({  icon, headingOne, paragraph , bgColor , textColor , onSelectType , id , selectType}) => {
+export const AiInvolvementCard = ({  icon, headingOne, paragraph ,  onSelectType , id , selectType}) => {
     return (
         <div 
         onClick={()=> onSelectType(id)}
@@ -19,3 +19,5 @@ export const AiInvolvementCard = ({  icon, headingOne, paragraph , bgColor , tex
         </div>
     )
 }
+
+export default AiInvolvementCard;
