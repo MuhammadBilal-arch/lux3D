@@ -32,7 +32,7 @@ export default function Home() {
         className={`
         relative
         w-full   
-        mx-auto  flex  md:min-h-screen  px-5 sm:px-12 md:px-14 lg:px-20`}
+        mx-auto  flex min-h-96 md:min-h-screen  px-5 sm:px-12 md:px-14 lg:px-20`}
       >
         <div className="absolute left-0 w-full h-full lg:h-auto  2xl:h-full">
           <Image
@@ -54,7 +54,7 @@ export default function Home() {
             <div
 
               className="relative heading-1 text-white font-semibold z-10">
-              <div className="relative text-xl sm:text-2xl md:text-3xl lg:text-4xl  lg:leading-[50px] uppercase">
+              <div className="relative text-base sm:text-2xl md:text-3xl lg:text-4xl  lg:leading-[50px] uppercase">
                 The perfect pool & wellness <br /> experience
               </div>
             </div>

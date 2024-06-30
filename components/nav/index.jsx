@@ -37,7 +37,7 @@ const Nav = () => {
   }, [drawerState]);
 
   const handleSetActive = useCallback((to) => {
-    console.log('path',to)
+    console.log('path', to)
     setActiveItem(to);
   });
 
@@ -46,7 +46,7 @@ const Nav = () => {
 
       <ScrollLink
         activeClass="active"
-        className={`cursor-pointer ${activeItem === path ? 'text-white' : 'text-white opacity-50'}`}            
+        className={`cursor-pointer hover:opacity-100 ${activeItem === path ? 'text-white' : 'text-white opacity-50'}`}
         to={path}
         spy={true}
         smooth={true}
@@ -83,7 +83,7 @@ const Nav = () => {
       {drawerState && (
         <div
           ref={drawerRef}
-          className="min-h-screen duration-300 fixed w-[250px] z-[1000] bg-white p-5"
+          className="min-h-screen bg-aqua duration-300 fixed w-[250px] z-[1000]  p-5"
         >
           <div className="flex flex-col items-center h-full text-black">
             <div className="flex items-center justify-end w-full">
@@ -92,20 +92,12 @@ const Nav = () => {
                 className="text-red text-3xl cursor-pointer"
               />
             </div>
-            <ul className="space-y-4 lg:space-x-6 xl:space-x-8">
-              <li>
-                <Link href="/auth/signin">Our Services</Link>
-              </li>
-              <li>
-                <Link href="/toxicology">Analytics</Link>
-              </li>
-              <li>
-                <Link href="/help">Our Projects</Link>
-              </li>
-              <li>
-                <Link href="/payment">What we offer</Link>
-              </li>
-            </ul>
+            <div className="space-y-4 text-white flex flex-col text-xs">
+              {memoizedMenuItems}
+              <div className="text-white opacity-50">
+                <Link href="/ai-involvement">Get Quote</Link>
+              </div>
+            </div>
           </div>
         </div>
       )}

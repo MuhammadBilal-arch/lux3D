@@ -8,7 +8,7 @@ const OurProjects = () => {
             className="bg-gray-background py-20">
             <div
                 data-aos="fade-down"
-                className="bg-aqua rounded-3xl w-10/12 mx-auto min-h-96 py-10 px-10 space-y-10"
+                className="bg-aqua rounded-3xl w-11/12 md:w-10/12 mx-auto min-h-96 py-10 px-4 md:px-10 space-y-10"
                 style={{
                     backgroundImage: `url(${ASSETS.OUR_PROJECT.OUR_PROJECT_PATTERN.src})`,
                     backgroundSize: 'cover',
